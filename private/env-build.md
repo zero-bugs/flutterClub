@@ -16,9 +16,9 @@
 
 
 ## Gradle下载地址
-****地址：https://gradle.org/releases/ ****
-****本次使用的版本是Gradle5.6，下载压缩包，然后解压到指定目录（实际开发时可以放到D盘自定义目录D:\DevTool\）。****
-****环境变量设置：新建GRADLE_HOME=D:\DevTool\gradle-6.5，然后加入Path=Path;%GRADLE_HOME%\bin，调出任务终端查看版本号****
+**** 地址：https://gradle.org/releases/ ****
+**** 本次使用的版本是Gradle5.6，下载压缩包，然后解压到指定目录（实际开发时可以放到D盘自定义目录D:\DevTool\）。****
+**** 环境变量设置：新建GRADLE_HOME=D:\DevTool\gradle-6.5，然后加入Path=Path;%GRADLE_HOME%\bin，调出任务终端查看版本号****
 
 	\> gradle -v
 	------------------------------------------------------------
@@ -36,8 +36,8 @@
 
 
 ## Gradle配置文件
-****Gradle不需要配置全局配置文件，基于单个项目设置脚本。在项目的gradle.properties文件中配置相应****
-###gradle.properties
+**** Gradle不需要配置全局配置文件，基于单个项目设置脚本。在项目的gradle.properties文件中配置相应****
+### gradle.properties
 	org.gradle.jvmargs=-Xmx1536M
 	org.gradle.daemon=true
 	org.gradle.parallel=true
@@ -88,8 +88,8 @@
 	}
 
 ## Git配置
-###下载地址:https://git-scm.com/download/win/
-###学习地址：https://www.liaoxuefeng.com/wiki/896043488029600
+### 下载地址:https://git-scm.com/download/win/
+### 学习地址：https://www.liaoxuefeng.com/wiki/896043488029600
 ##### git配置
 代理配置
 
@@ -124,8 +124,8 @@
 
 
 ## Flutter配置
-###学习地址:https://flutterchina.club/
-****在国内环境下，可以使用清华大学镜像地址：https://mirrors.tuna.tsinghua.edu.cn/help/flutter/****
+### 学习地址:https://flutterchina.club/
+**** 在国内环境下，可以使用清华大学镜像地址：https://mirrors.tuna.tsinghua.edu.cn/help/flutter/****
 
 清华 TUNA 协会
 定时与 Flutter 社区 Storage 镜像同步，Pub API 采取定时主动抓取策略，镜像配置了完善的失败回源策略（推荐）。
