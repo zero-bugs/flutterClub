@@ -4,7 +4,7 @@
 
 
 
-开学学习flutter有半年了，始终没有大的突破，主要原因是懒。程序员怎么能懒呢^_^
+开始学习flutter有半年了，始终没有大的突破，主要原因是懒。程序员怎么能懒呢^_^
 
 
 ## 环境搭建部分
@@ -36,7 +36,7 @@
 
 
 ## Gradle配置文件
-**** Gradle不需要配置全局配置文件，基于单个项目设置脚本。在项目的gradle.properties文件中配置相应****
+**** Gradle不需要配置全局配置文件，基于单个项目设置脚本。在项目的gradle.properties文件中配置相应 ****
 **** AndroidStudio中的Gradle与独立插件版本对应关系： https://developer.android.com/studio/releases/gradle-plugin#updating-gradle ****
 ### gradle.properties
 	org.gradle.jvmargs=-Xmx1536M
