@@ -61,6 +61,8 @@ cer格式证书转pem格式：
 openssl x509 -inform der -in apple_pay.cer -out apple_pay_certificate.pem
 
 
+http://blog.hubwiz.com/2019/03/08/openssl-essentials/
+
 
 
 
