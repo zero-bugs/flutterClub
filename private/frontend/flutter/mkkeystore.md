@@ -14,7 +14,7 @@ keytool -genkey -v -keystore key.jks
 			-validity 10000
 			-alias key
 ```
->注： 密钥库密码和密钥密码可以设置不通的值
+> 注： 密钥库密码和密钥密码可以设置不通的值
 
 #### 转换 jks 密匙库到标准PCKS12格式
 ```
@@ -81,9 +81,9 @@ Keytool 是一个Java 数据证书的管理工具 ,Keytool 将密钥（key）和
 	-export      将别名指定的证书导出到文件  keytool -export -alias 需要导出的别名 -keystore 指定keystore -file 指定导出的证书位置及证书名称 -storepass 密码
 	-file        参数指定导出到文件的文件名
 	-delete      删除密钥库中某条目          keytool -delete -alias 指定需删除的别  -keystore 指定keystore  -storepass 密码
-	-printcert   查看导出的证书信息          keytool -printcert -file yushan.crt
+	-printcert   查看导出的证书信息          keytool -printcert -file key.crt
 	-keypasswd   修改密钥库中指定条目口令    keytool -keypasswd -alias 需修改的别名 -keypass 旧密码 -new  新密码  -storepass keystore密码  -keystore sage
-	-storepasswd 修改keystore口令      keytool -storepasswd -keystore e:/yushan.keystore(需修改口令的keystore) -storepass 123456(原始密码) -new yushan(新密码)
+	-storepasswd 修改keystore口令      keytool -storepasswd -keystore ./key.keystore(需修改口令的keystore) -storepass 123456(原始密码) -new changeit(新密码)
 	-import      将已签名数字证书导入密钥库  keytool -import -alias 指定导入条目的别名 -keystore 指定keystore -file 需导入的证书
 ```
 
