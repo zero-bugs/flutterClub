@@ -5,7 +5,7 @@
 - 更新 gradle 并指定 properties；
 - 执行 apk 生成命令;
 
-####创建 jks 密匙库
+#### 创建 jks 密匙库
 在终端中输入 keytool 命令，其中 -keystore E:/key.jks 表示存储位置，-validity 10000 表示有效期单位是【天】，-alias key 表示别名。确认无误后回车。
 ```
 keytool -genkey -v -keystore key.jks
@@ -14,9 +14,9 @@ keytool -genkey -v -keystore key.jks
 			-validity 10000
 			-alias key
 ```
-> 注： 密钥库密码和密钥密码可以设置不通的值
+>注： 密钥库密码和密钥密码可以设置不通的值
 
-####转换 jks 密匙库到标准PCKS12格式
+#### 转换 jks 密匙库到标准PCKS12格式
 ```
 keytool -importkeystore -srckeystore key.jks
 			-destkeystore key-pkcs12-1.jks
@@ -24,7 +24,7 @@ keytool -importkeystore -srckeystore key.jks
 			-destkeypass newKeyStorePass
 ```
 
-####添加 properties 并指定 jks
+#### 添加 properties 并指定 jks
 在 android 目录下创建 key.properties 并配置 storePassword（密匙库密码）、keyPassword（密匙密码）、keyAlias（别名）、storeFile（jks文件地址）
 ```
 storePassword=xxxx
@@ -33,7 +33,7 @@ keyAlias=xxxx
 storeFile=xxxx
 ```
 
-####更新 gradle 并指定 properties
+#### 更新 gradle 并指定 properties
 在 android -> app -> build.gradle 文件中 android { 标签前增加 key.properties 文件解析地址
 ```
 def keystorePropertiesFile = rootProject.file("key.properties")
@@ -45,7 +45,7 @@ android {
 }
 ```
 
-####执行 apk 生成命令
+#### 执行 apk 生成命令
 在 Studio Terminal 内输入命令 flutter build apk，稍等片刻等待 apk 生成。生成成功后即可在 build -> app -> outputs -> apk 文件夹中获取最终打包出来的 apk 文件安装试用
 ```
 >flutter build apk --target-platform android-arm,android-arm64,android-x64 --split-per-abi
@@ -59,12 +59,13 @@ Running Gradle task 'assembleRelease'... Done                       9.9s
 √ Built build\app\outputs\apk\release\app-x86_64-release.apk (10.5MB)
 ```
 
-##keytool工具命令大全
+## keytool工具命令大全
 Keytool 是一个Java 数据证书的管理工具 ,Keytool 将密钥（key）和证书（certificates）存在一个称为keystore的文件中 在keystore里，包含两种数据:
 - 密钥实体（Key entity）——密钥（secret key）又或者是私钥和配对公钥（采用非对称加密） 
 - 可信任的证书实体（trusted certificate entries）——只包含公钥
 
-####常用命令：
+#### 常用命令：
+```
 	-genkey 在用户主目录中创建一个默认文件".keystore",还会产生一个mykey的别名，mykey中包含用户的公钥、私钥和证书(在没有指定生成位置的情况下,keystore会存在用户系统默认目录，如：对于window xp系统，会生成在系统的C:/Documents and Settings/UserName/文件名为“.keystore”)
 	-alias       产生别名
 	-keystore    指定密钥库的名称(产生的各类信息将不在.keystore文件中)
@@ -84,6 +85,7 @@ Keytool 是一个Java 数据证书的管理工具 ,Keytool 将密钥（key）和
 	-keypasswd   修改密钥库中指定条目口令    keytool -keypasswd -alias 需修改的别名 -keypass 旧密码 -new  新密码  -storepass keystore密码  -keystore sage
 	-storepasswd 修改keystore口令      keytool -storepasswd -keystore e:/yushan.keystore(需修改口令的keystore) -storepass 123456(原始密码) -new yushan(新密码)
 	-import      将已签名数字证书导入密钥库  keytool -import -alias 指定导入条目的别名 -keystore 指定keystore -file 需导入的证书
+```
 
 ```
 下面是各选项的缺省值
