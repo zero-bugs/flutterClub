@@ -76,3 +76,18 @@ openssl x509 -inform der -in apple_pay.cer -out apple_pay_certificate.pem
 
 - [] http://blog.hubwiz.com/2019/03/08/openssl-essentials/
 
+##附公私钥生成：
+####生成私钥
+```
+openssl genrsa -out rsa_private_key.pem 2048
+```
+
+####把RSA私钥转换成PKCS8格式
+```
+openssl pkcs8 -topk8 -in rsa_private_key.pem -out pkcs8_rsa_private_key.pem -nocrypt
+```
+
+####生成公钥
+```
+openssl rsa -in rsa_private_key.pem -out rsa_public_key.pem -pubout
+```
