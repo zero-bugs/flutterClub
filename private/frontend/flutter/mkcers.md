@@ -86,8 +86,8 @@
 ```
 	openssl pkcs12 \
 		-export -out server.pfx \
-		-inkey server_private.key \
-		-in server.cr
+		-inkey domain_private.key \
+		-in domain.crt
 ```
 6、把pkcs12格式转化为java常用的jks格式（可选）
 ```
